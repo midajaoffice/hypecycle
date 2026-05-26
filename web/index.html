@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HypeCycle — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="brand">
+          <span class="brand-mark">HC</span>
+          <div>
+            <h1>HypeCycle</h1>
+            <p class="subtitle">Modellportfolio · Mission Control</p>
+          </div>
+        </div>
+        <div class="header-meta" id="header-meta"></div>
+        <button type="button" class="btn-refresh" id="btn-refresh" title="Daten neu laden">
+          Aktualisieren
+        </button>
+      </header>
+
+      <div id="error-banner" class="error-banner hidden"></div>
+
+      <main class="grid" id="dashboard">
+        <section class="card card-hero span-2">
+          <h2>North Star</h2>
+          <div class="hero-inner" id="north-star"></div>
+        </section>
+
+        <section class="card">
+          <h2>Kapital</h2>
+          <div class="stat-grid" id="capital-stats"></div>
+        </section>
+
+        <section class="card">
+          <h2>Operator</h2>
+          <dl class="operator-dl" id="operator-dl"></dl>
+        </section>
+
+        <section class="card span-2">
+          <h2>Positionen</h2>
+          <div class="table-wrap" id="positions-table"></div>
+        </section>
+
+        <section class="card span-2">
+          <h2>Watchlist</h2>
+          <div class="table-wrap" id="watchlist-table"></div>
+        </section>
+
+        <section class="card">
+          <h2>Offene Prüfpunkte</h2>
+          <ul class="check-list" id="open-checks"></ul>
+        </section>
+
+        <section class="card">
+          <h2>Decision Log</h2>
+          <div class="log-stack" id="decision-log"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Quelle: <code>täglich/*.md</code></span>
+        <span id="footer-hint">Lokal starten: <code>./web/start.sh</code></span>
+      </footer>
+    </div>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
