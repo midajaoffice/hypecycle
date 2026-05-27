@@ -166,7 +166,7 @@ Immer setzen: **keine** = nur Research; **Kauf/Verkauf bestätigt** = Mission Co
 **Beispiel Erst-Zyklus (Cash, 2× Kaufen prüfen):**
 
 ```text
-### Briefing — 2026-05-26
+### Briefing — 2026-05-25
 1. READ — cash=500 invest=0 pv=500 pos=keine dq=C
 2. NS — 500→5000|10.0%|lücke=4500|tag=1/365
 3. VAL — dq=C|broker,fractionals,fx
@@ -181,7 +181,7 @@ Immer setzen: **keine** = nur Research; **Kauf/Verkauf bestätigt** = Mission Co
 **Beispiel mit Positionen:**
 
 ```text
-### Briefing — 2026-05-27
+### Briefing — 2026-05-26
 1. READ — cash=273 invest=225 pv=498 pos=RKLB,UEC dq=B
 2. NS — 500→5000|10.0%|lücke=4502|tag=2/365
 3. VAL — dq=B|broker_fill,fx_kurse

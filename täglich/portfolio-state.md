@@ -1,6 +1,6 @@
 # Portfolio State
 
-**Letztes Update:** 2026-05-27
+**Letztes Update:** 2026-05-26
 **Datenqualität:** B
 **Modus:** Modellportfolio / Research-Unterstützung
 
@@ -13,11 +13,11 @@
 > Operator: **zuerst nur diesen Block lesen.** Bei jedem Update vollständig aktualisieren.
 
 ```
-north_star: 500→5000|EUR|fortschritt:10.0%|luecke:4502|tag:2/365|ziel_datum:2027-05-26
+north_star: 500→5000|EUR|fortschritt:10.0%|luecke:4502|tag:2/365|ziel_datum:2027-05-25
 kapital: cash=273|investiert=225|pv=498|dq=B
 positionen: RKLB,UEC
 watchlist_top: ASTS,RCAT
-letzte_entscheidung: gekauft|RKLB_125EUR_UEC_100EUR|2026-05-27
+letzte_entscheidung: gekauft|RKLB_125EUR_UEC_100EUR|2026-05-26
 gebuehren_modell: 1EUR/order|0.25pct_slippage|steuer_modell:26.375pct_DE
 ```
 
@@ -28,8 +28,8 @@ gebuehren_modell: 1EUR/order|0.25pct_slippage|steuer_modell:26.375pct_DE
 | Feld | Wert |
 |---|---|
 | **Starsumme (Startkapital)** | **500 EUR** |
-| **Startdatum North Star** | **2026-05-26** |
-| **Zielhorizont** | bis **2027-05-26** |
+| **Startdatum North Star** | **2026-05-25** |
+| **Zielhorizont** | bis **2027-05-25** |
 | **Ziel-Multiple** | **10×** ohne Hebel |
 | **Zielwert (TARGET_VALUE_EUR)** | **5.000 EUR** |
 | **Aktueller Fortschritt %** | **10,0 %** (498 ÷ 5.000) |
@@ -90,8 +90,8 @@ Spekulatives Modellportfolio von 500 EUR auf 5.000 EUR innerhalb von 12 Monaten 
 
 | Asset | Ticker | Markt | Kaufdatum | Kaufkurs | Aktueller Kurs | Positionsgröße | Positionswert | These | Katalysator | Stop/Exit | Status | Datenqualität |
 |---|---|---|---|---:|---:|---:|---:|---|---|---|---|---|
-| Rocket Lab | RKLB | NASDAQ | 2026-05-27 | 135,76 USD | 135,76 USD | 125 EUR | 125 | Space-Defense-Wachstum, Launch-Backlog | Q1 Rekorde, Neutron, Space Force | Verkauf prüfen bei -15 % oder These bricht (Neutron-Verzug) | Offen | B |
-| Uranium Energy Corp | UEC | NYSE American | 2026-05-27 | 13,02 USD | 13,02 USD | 100 EUR | 100 | US-Uran-Produktion, Fuel-Security | Burke Hollow, Uranpreis | Verkauf prüfen bei -15 % oder Uranpreis-/Ramp-Bruch | Offen | B |
+| Rocket Lab | RKLB | NASDAQ | 2026-05-26 | 135,76 USD | 135,76 USD | 125 EUR | 125 | Space-Defense-Wachstum, Launch-Backlog | Q1 Rekorde, Neutron, Space Force | Verkauf prüfen bei -15 % oder These bricht (Neutron-Verzug) | Offen | B |
+| Uranium Energy Corp | UEC | NYSE American | 2026-05-26 | 13,02 USD | 13,02 USD | 100 EUR | 100 | US-Uran-Produktion, Fuel-Security | Burke Hollow, Uranpreis | Verkauf prüfen bei -15 % oder Uranpreis-/Ramp-Bruch | Offen | B |
 
 ---
 
@@ -131,5 +131,5 @@ Spekulatives Modellportfolio von 500 EUR auf 5.000 EUR innerhalb von 12 Monaten 
 
 ## 8. Letzte Änderungen
 
-- 2026-05-27: RKLB (125 EUR) und UEC (100 EUR) gekauft; Cash 273 EUR; 2× 1 EUR Gebühr.
-- 2026-05-26: Erst-Zyklus; Watchlist mit 8 Kandidaten; RKLB/UEC zuvor „Kaufen prüfen“.
+- 2026-05-26: RKLB (125 EUR) und UEC (100 EUR) gekauft; Cash 273 EUR; 2× 1 EUR Gebühr.
+- 2026-05-25: Ursprungsportfolio; Watchlist mit 8 Kandidaten; RKLB/UEC „Kaufen prüfen“, keine Positionen.

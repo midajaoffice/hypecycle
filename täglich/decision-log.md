@@ -35,7 +35,7 @@ Nach jedem Briefing `# NEW_LOG_ENTRY` einfügen in:
 
 ---
 
-## 2026-05-27 (Erstkauf)
+## 2026-05-26 (Erstkauf)
 
 **North Star:** 500→5000 EUR | Ist 498 EUR | Fortschritt 10,0 % | Lücke 4.502 EUR
 **DQ:** B | **Fazit:** Erstkauf RKLB + UEC | **Kaufen prüfen:** — | **Verkauf prüfen:** —
@@ -47,7 +47,7 @@ Nach jedem Briefing `# NEW_LOG_ENTRY` einfügen in:
 
 ---
 
-## 2026-05-26 (Erst-Zyklus)
+## 2026-05-25 (Ursprungsportfolio)
 
 **North Star:** 500→5000 EUR | Ist 500 EUR | Fortschritt 10,0 % | Lücke 4.500 EUR
 **DQ:** C | **Fazit:** Watchlist erstellt, keine Ausführung | **Kaufen prüfen:** RKLB 125 €, UEC 100 € | **Verkauf prüfen:** —

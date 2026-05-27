@@ -8,7 +8,7 @@ Vollständige Historie: [`decision-log.md`](decision-log.md) · Archiv: [`../arc
 
 ---
 
-## 2026-05-27
+## 2026-05-26
 
 **North Star:** 500→5000 EUR | Ist 498 EUR | Fortschritt 10,0 % | Lücke 4.502 EUR
 **DQ:** B | **Fazit:** Erstkauf RKLB + UEC | **Kaufen prüfen:** — | **Verkauf prüfen:** —
@@ -20,7 +20,7 @@ Vollständige Historie: [`decision-log.md`](decision-log.md) · Archiv: [`../arc
 
 ---
 
-## 2026-05-26
+## 2026-05-25
 
 **North Star:** 500→5000 EUR | Ist 500 EUR | Fortschritt 10,0 % | Lücke 4.500 EUR
 **DQ:** C | **Fazit:** Watchlist erstellt, keine Ausführung | **Kaufen prüfen:** RKLB 125 €, UEC 100 € | **Verkauf prüfen:** —

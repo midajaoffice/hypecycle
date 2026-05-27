@@ -11,7 +11,7 @@ Lies OPERATOR_VIEW in portfolio-state.md, dann operator-core.md.
 
 KONTEXT (Fakten):
 - Starsumme: 500 EUR Cash, keine Positionen
-- North Star: 5.000 EUR in 12 Monaten (10×, Start 2026-05-26), ohne Hebel
+- North Star: 5.000 EUR in 12 Monaten (10×, Start 2026-05-25), ohne Hebel
 - Gebühren: 1 EUR/Order, 0,25 % Slippage | Steuer-Modell: 26,375 % DE, 1.000 € Freistellung
 - Erlaubt: Aktien, ETFs, Rohstoff-ETPs (Xetra, NYSE, NASDAQ, Euronext)
 - Verboten: Krypto, Forex, CFD, Hebel, Optionen
