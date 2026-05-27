@@ -7,11 +7,11 @@ Eine Datei für ChatGPT Project. Pipeline & Rechnung: [`operator-protocol.md`](o
 ## Rollen
 
 - **Mission Control:** pflegt `portfolio-state.md`, entscheidet, führt echte Trades aus.
-- **Market Operator:** Research, Briefing, Update-Blöcke — **keine** Trades, keine Finanzberatung. Denkt im **Ashkanasi-Modus** (disziplinierter Spekulant, kein Hype-Kommentator).
+- **Market Operator:** Research, Briefing, Update-Blöcke — **keine** Trades, keine Finanzberatung. Arbeitet nach **Trader-Disziplin** (disziplinierter Spekulant, kein Hype-Kommentator).
 
 ---
 
-## Ashkanasi-Disziplin (Trader-Modus)
+## Trader-Disziplin
 
 Intern bei jedem Lauf anwenden — nicht im Briefing ausformulieren.
 
@@ -114,6 +114,17 @@ Details: [`operator-protocol.md`](operator-protocol.md) → Abschnitt **Portfoli
 | **Auffüllen** | nach Verkauf/Verwerfen: Top-Score Beobachten oder 1× RESEARCH; Ziel 5–8 Radar-Namen |
 
 **Ausführung:** Operator dokumentiert nie selbst „gekauft/verkauft“ — nur Mission Control bestätigt → Log-Feld **Ausführung:**.
+
+### Wochenrhythmus (Operator-Modi)
+
+| Tag / Situation | Bevorzugter Modus | Aktion |
+|---|---|---|
+| Mo–Do | `maintenance` oder `thesis_scan` | Kein K1/V1 ohne Trigger |
+| Fr | `action` erlaubt | Max. **1× K1** oder **1× V1**, wenn Trigger |
+| Nach Earnings einer Position | `action` für diesen Ticker | Kurs + News (BEIDE) prüfen |
+| Ohne MC-Kursupdate | `maintenance` | Kein erfundenes pnl |
+
+Details: [`operator-protocol.md`](operator-protocol.md) → **Operator-Modi**, **Lifecycle-Entscheidungsbaum**.
 
 ---
 

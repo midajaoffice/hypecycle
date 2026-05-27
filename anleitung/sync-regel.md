@@ -35,7 +35,8 @@
 
 - **Neuer Chat** täglich
 - Alte Chats nicht weiterführen
-- Memory: kein Portfolio-Bestand
+- **Memory = Betriebssystem** (Workflow, Trader-Disziplin, Modi) · **Files = Buchhaltung** (Bestand, Kurse)
+- Memory-Seed: [`memory-seed.md`](memory-seed.md) — **kein** Portfolio-Bestand in Memory
 
 ## Monatlich
 

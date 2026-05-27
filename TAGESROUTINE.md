@@ -4,8 +4,10 @@
 
 ## Morgens (1 Min.)
 
+- [ ] [`anleitung/mc-datenritual.md`](anleitung/mc-datenritual.md) — Kurse/pnl/modus vor Chat?
 - [ ] `täglich/portfolio-state.md` — `OPERATOR_VIEW` + Cash ok?
-- [ ] Project-Dateien veraltet? → aus Google ersetzen
+- [ ] Project-Dateien veraltet? → aus Repo ersetzen
+- [ ] **Freitag:** max. 1× K1 oder V1 nur bei Trigger (`operator-core` Wochenrhythmus)
 
 ---
 

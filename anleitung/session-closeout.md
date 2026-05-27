@@ -6,10 +6,10 @@
 
 ## Vor dem Chat
 
-- [ ] [`../täglich/portfolio-state.md`](../täglich/portfolio-state.md) — `OPERATOR_VIEW` + Cash ok? (Lebenszyklus: max. 4 Pos., 20 % Cash-Reserve)
-- [ ] **Broker-Fills, FX, aktuelle Kurse** in §4 eingetragen? (sonst bleibt Operator im Halte-Modus — kein echtes P&L)
+- [ ] [`mc-datenritual.md`](mc-datenritual.md) — Broker-Fills, FX, Kurse, pnl, `modus` in OPERATOR_VIEW
+- [ ] [`../täglich/portfolio-state.md`](../täglich/portfolio-state.md) — `OPERATOR_VIEW` + Cash ok? (max. 4 Pos., 20 % Cash-Reserve)
 - [ ] Neuer Chat → Project **HypeCycle**
-- [ ] Project-Dateien aktuell (sonst aus Repo kopieren / Project ersetzen)
+- [ ] Project-Dateien aktuell (`operator-core`, `operator-protocol`, täglich/)
 
 **Prompt:** [`daily-prompt.md`](daily-prompt.md)
 
@@ -29,3 +29,4 @@
 ## Monatlich
 
 - [ ] Einträge > 14 Tage aus `decision-log-recent` → `archiv/`
+- [ ] Project Memory prüfen ([`memory-seed.md`](memory-seed.md)) — keine Portfolio-Zahlen

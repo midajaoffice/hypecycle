@@ -6,7 +6,7 @@ Project-Name: **`HypeCycle`**
 
 ## 1. Instructions
 
-[`chatgpt-instructions.md`](../chatgpt-instructions.md) → Project **Instructions** kopieren (Ashkanasi-Modus, Halte-Tag, Web-Regeln)
+[`chatgpt-instructions.md`](../chatgpt-instructions.md) → Project **Instructions** kopieren (Trader-Disziplin, Operator-Modi, Lifecycle)
 
 ---
 
@@ -28,7 +28,7 @@ Project-Name: **`HypeCycle`**
 
 ## 3. Tools
 
-Web Search **an** · Code Interpreter **aus** · Memory **an** (keine Portfolio-Zahlen aus Memory)
+Web Search **an** · Code Interpreter **aus** · Memory **an** mit [`memory-seed.md`](memory-seed.md) (keine Portfolio-Zahlen in Memory; monatlich prüfen)
 
 ---
 

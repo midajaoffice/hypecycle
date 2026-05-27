@@ -25,23 +25,23 @@ Details: [`operator-core.md`](operator-core.md) · Lese-Header: `portfolio-state
 
 ## Phase 3 — RESEARCH
 
-Ashkanasi-Modus: [`operator-core.md`](operator-core.md) → **Ashkanasi-Disziplin**.
+Trader-Disziplin: [`operator-core.md`](operator-core.md) → **Trader-Disziplin**.
 
-### Web Search — wann ja / nein
+### Operator-Modi (Pflicht in OPERATOR_VIEW + Briefing ACT)
 
-| Situation | Web Search |
-|---|---|
-| ACT `halten` / `kein_neukauf` / `keine_ausfuehrung`, keine K1/K2/V1 | **nein** (kein Kurs-/P&L-Update erfinden) |
-| K1/K2 **Kaufen prüfen** oder neuer Watchlist-Kandidat (Auffüllen) | **ja** — Kurse, Katalysator, News |
-| V1 **Verkauf prüfen** (Stop, These, Gewinnmitnahme) | **ja** — These/Katalysator prüfen; Kurs in §4 nur wenn bestätigt |
-| DQ **D/E** | **nein** für Kauf/Verkauf-Calls |
+| Modus | Web Search | §4 Kurse / pnl |
+|---|---|---|
+| `maintenance` | **nein** | nur aus File; nicht erfinden |
+| `thesis_scan` | **ja**, nur News/Katalysator für **bestehende Positionen** | **nicht** ändern |
+| `action` | **ja** (K1/K2/V1, neuer Watchlist-Kandidat) | nur wenn Mission Control bestätigt |
 
-**Halte-Tag ohne neue Broker-Fills/Kurse von Mission Control:**
+**Modus wählen (intern):**
 
-- §4 `Aktueller Kurs`, `pnl`, PV **unverändert** lassen (wie im File)
-- Briefing `POS` spiegelt §4 (`pnl=0%` ok wenn unverifiziert)
-- VAL listet fehlende Felder (`broker_fill`, `fx_kurse`, `aktuelle_kurse`)
-- DQ **nicht** ohne neue bestätigte Daten hochstufen
+- Keine MC-Kursupdates seit letztem Lauf → `maintenance` (Default)
+- Positionen + offener News-Prüfpunkt in §6 (z. B. Uran, Earnings) → `thesis_scan`
+- K1/K2/V1 oder Freitags-Action-Fenster mit Trigger → `action`
+
+DQ **D/E:** immer `maintenance`; keine K1/K2/V1.
 
 ### Research-Qualität
 
@@ -51,20 +51,42 @@ Ashkanasi-Modus: [`operator-core.md`](operator-core.md) → **Ashkanasi-Diszipli
 
 ---
 
+## Lifecycle-Entscheidungsbaum (intern vor ACT)
+
+| Trigger | Primär | Operator-Aktion |
+|---|---|---|
+| `pnl ≤ -15%` (aus §4, MC-bestätigt) | **Kurs** | V1 `grund=stop` |
+| `pnl ≥ +30%` | **Kurs** (+ These prüfen) | V1 prüfen `grund=gewinnmitnahme` |
+| Katalysator verfehlt / These bricht (News) | **News** | V1 `grund=these_bruch` |
+| `Story ≥ 6.5` **und** `Setup ≥ 6.0` + Trade-Gate + Cash | **Beides** | K1/K2 |
+| Keiner | — | `halten\|kein_neukauf`, `trigger=keiner` |
+
+Briefing ACT-Format: `halten|modus=maintenance|trigger=keiner` oder `verkauf_pruefen|modus=action|trigger=kurs`.
+
+---
+
 ## Phase 4 — SCORE
 
-Pro Kandidat (Watchlist oder Position), Score **1–10** je Kriterium:
+### Story vs. Setup (Watchlist)
+
+| Feld | Bedeutung | Skala |
+|---|---|---|
+| **Story** | These, Katalysator, TAM, Hype-Potenzial | 1–10 |
+| **Setup** | Kurs-Timing, Gebühren-Gate, Entry-Qualität | 1–10 |
+| **Score** | Gesamt (Richtwert; Operator darf anpassen) | 1–10 |
+
+**Kaufen prüfen** nur wenn: `Story ≥ 6.5` **und** `Setup ≥ 6.0` **und** Trade-Gate **und** Cash ≥ 20 % Reserve.
+
+Pro Kandidat zusätzlich intern (Gewichtung):
 
 | Kriterium | Gewichtung |
 |---|---|
-| Katalysator-Stärke | hoch |
-| Timing | hoch |
-| Hype-Potenzial | mittel |
+| Katalysator-Stärke | hoch → Story |
+| Timing / Gebühren | hoch → Setup |
 | Risiko | hoch (niedriger Score = riskanter) |
-| Gebühren-Impact (bei 500 €) | hoch |
 | Portfolio-Fit / North Star | mittel |
 
-**Gesamt** ≈ Durchschnitt oder begründeter Mix → Status: Beobachten | Kaufen prüfen | Verkauf prüfen | Daten prüfen | Position
+**Gesamt** → Status: Beobachten | Kaufen prüfen | Verkauf prüfen | Daten prüfen | Position
 
 ### Positionsgrößen (Starsumme 500 €)
 
@@ -124,6 +146,16 @@ Defaults: FEE_ORDER = 1 €, SLIPPAGE_PCT = 0,25 %
 ### B) Verkauf & Gewinnrealisierung
 
 **Operator empfiehlt nur „Verkauf prüfen“ (V1)** — verkauft nie selbst.
+
+#### V1-Checkliste (intern, vor Briefing-Zeile V1)
+
+1. **Trigger-Typ** gesetzt? (`kurs` | `news` | `beides`)
+2. **§4 Stop/Exit** zitiert (Wortlaut aus portfolio-state)?
+3. **Teilverkauf** nötig? (bei 500 € Modell: meist **nein** — ganz halten oder V1 ganz)
+4. **Cash nach Verkauf** ≥ 20 % PV (Schätzung)?
+5. **Radar-Slot** frei für Auffüllen?
+
+Briefing: `V1 — TICKER|grund=stop|trigger=kurs` (oder `these_bruch|trigger=news`).
 
 | Auslöser | Aktion Operator | Nach bestätigtem Verkauf (Mission Control) |
 |---|---|---|
@@ -218,7 +250,7 @@ Immer setzen: **keine** = nur Research; **Kauf/Verkauf bestätigt** = Mission Co
 1. READ — cash=273 invest=225 pv=498 pos=RKLB,UEC dq=B
 2. NS — 500→5000|10.0%|lücke=4502|tag=3/365
 3. VAL — dq=B|broker_fill,fx_kurse,aktuelle_kurse
-4. ACT — halten|keine_ausfuehrung|kein_neukauf
+4. ACT — halten|modus=maintenance|trigger=keiner
 5. POS — RKLB/Rocket Lab:125@135.76 pnl=0%,UEC/Uranium Energy:100@13.02 pnl=0%
 6. RAD — ASTS:beobachten,RCAT:beobachten,KTOS:beobachten,SMCI:beobachten,VRT:daten_prüfen,CRSR:beobachten
 7. RISK — 45%_investiert;55%_cash;10x_ambitioniert
