@@ -11,7 +11,7 @@
 | `chatgpt/` | `operator-core.md`, `operator-protocol.md` |
 | `täglich/` | `portfolio-state.md`, `decision-log-recent.md`, `watchlist.md` |
 
-**Instructions:** Mac `chatgpt-instructions.md`
+**Instructions:** [`../chatgpt-instructions.md`](../chatgpt-instructions.md) (Repo = Wahrheit; Mac-Ordner `HyperCycle/chatgpt-instructions.md` spiegeln)
 
 ## Nach jedem Briefing
 

@@ -25,10 +25,29 @@ Details: [`operator-core.md`](operator-core.md) · Lese-Header: `portfolio-state
 
 ## Phase 3 — RESEARCH
 
-- Web Search für Kurse, News, Katalysatoren
+Ashkanasi-Modus: [`operator-core.md`](operator-core.md) → **Ashkanasi-Disziplin**.
+
+### Web Search — wann ja / nein
+
+| Situation | Web Search |
+|---|---|
+| ACT `halten` / `kein_neukauf` / `keine_ausfuehrung`, keine K1/K2/V1 | **nein** (kein Kurs-/P&L-Update erfinden) |
+| K1/K2 **Kaufen prüfen** oder neuer Watchlist-Kandidat (Auffüllen) | **ja** — Kurse, Katalysator, News |
+| V1 **Verkauf prüfen** (Stop, These, Gewinnmitnahme) | **ja** — These/Katalysator prüfen; Kurs in §4 nur wenn bestätigt |
+| DQ **D/E** | **nein** für Kauf/Verkauf-Calls |
+
+**Halte-Tag ohne neue Broker-Fills/Kurse von Mission Control:**
+
+- §4 `Aktueller Kurs`, `pnl`, PV **unverändert** lassen (wie im File)
+- Briefing `POS` spiegelt §4 (`pnl=0%` ok wenn unverifiziert)
+- VAL listet fehlende Felder (`broker_fill`, `fx_kurse`, `aktuelle_kurse`)
+- DQ **nicht** ohne neue bestätigte Daten hochstufen
+
+### Research-Qualität
+
 - Jede Aussage intern: **Fakt** | **Annahme** | **Spekulation**
 - Unverifiziert = **NICHT VERIFIZIERT** — nichts erfinden
-- **Links** nur in Watchlist/§-Text der Blöcke, **nicht** im Briefing
+- **Links** nur in Watchlist/§-Text der Sync-Blöcke, **nicht** im Briefing
 
 ---
 
@@ -192,7 +211,21 @@ Immer setzen: **keine** = nur Research; **Kauf/Verkauf bestätigt** = Mission Co
 10. NEXT — kurse_verifizieren_broker_fill
 ```
 
-(Zeile 7 `POS` ersetzt K1/K2 wenn keine neuen Kauf-/Verkauf-Prüfungen.)
+**Beispiel Halte-Tag ohne neue Fill-/Kursdaten (Tag 3):**
+
+```text
+### Briefing — 2026-05-27
+1. READ — cash=273 invest=225 pv=498 pos=RKLB,UEC dq=B
+2. NS — 500→5000|10.0%|lücke=4502|tag=3/365
+3. VAL — dq=B|broker_fill,fx_kurse,aktuelle_kurse
+4. ACT — halten|keine_ausfuehrung|kein_neukauf
+5. POS — RKLB/Rocket Lab:125@135.76 pnl=0%,UEC/Uranium Energy:100@13.02 pnl=0%
+6. RAD — ASTS:beobachten,RCAT:beobachten,KTOS:beobachten,SMCI:beobachten,VRT:daten_prüfen,CRSR:beobachten
+7. RISK — 45%_investiert;55%_cash;10x_ambitioniert
+8. NEXT — broker_fills_fx_kurse_verifizieren;kurse_aktualisieren
+```
+
+(Zeile 5 `POS` ersetzt K1/K2 wenn keine neuen Kauf-/Verkauf-Prüfungen. Ohne bestätigte Kurs-/Fill-Daten: `pnl=0%` beibehalten, §4 nicht erfinden.)
 
 ### B) Sync-Blöcke (Teil 2 — für Mission Control)
 

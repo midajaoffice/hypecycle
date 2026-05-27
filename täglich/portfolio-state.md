@@ -1,6 +1,6 @@
 # Portfolio State
 
-**Letztes Update:** 2026-05-26
+**Letztes Update:** 2026-05-27
 **Datenqualität:** B
 **Modus:** Modellportfolio / Research-Unterstützung
 
@@ -13,11 +13,11 @@
 > Operator: **zuerst nur diesen Block lesen.** Bei jedem Update vollständig aktualisieren.
 
 ```
-north_star: 500→5000|EUR|fortschritt:10.0%|luecke:4502|tag:2/365|ziel_datum:2027-05-25
+north_star: 500→5000|EUR|fortschritt:10.0%|luecke:4502|tag:3/365|ziel_datum:2027-05-25
 kapital: cash=273|investiert=225|pv=498|dq=B
 positionen: RKLB,UEC
 watchlist_top: ASTS,RCAT
-letzte_entscheidung: gekauft|RKLB_125EUR_UEC_100EUR|2026-05-26
+letzte_entscheidung: halten|keine_ausfuehrung_kein_neukauf|2026-05-27
 gebuehren_modell: 1EUR/order|0.25pct_slippage|steuer_modell:26.375pct_DE
 ```
 
@@ -131,5 +131,6 @@ Spekulatives Modellportfolio von 500 EUR auf 5.000 EUR innerhalb von 12 Monaten 
 
 ## 8. Letzte Änderungen
 
+- 2026-05-27: Keine Ausführung; keine Cash-/Positions-/Statusänderung; OPERATOR_VIEW auf Tag 3/365 aktualisiert.
 - 2026-05-26: RKLB (125 EUR) und UEC (100 EUR) gekauft; Cash 273 EUR; 2× 1 EUR Gebühr.
 - 2026-05-25: Ursprungsportfolio; Watchlist mit 8 Kandidaten; RKLB/UEC „Kaufen prüfen“, keine Positionen.

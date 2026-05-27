@@ -6,7 +6,7 @@ Project-Name: **`HypeCycle`**
 
 ## 1. Instructions
 
-Mac-Repo: [`chatgpt-instructions.md`](../../../chatgpt-instructions.md) → Project **Instructions** kopieren
+[`chatgpt-instructions.md`](../chatgpt-instructions.md) → Project **Instructions** kopieren (Ashkanasi-Modus, Halte-Tag, Web-Regeln)
 
 ---
 
